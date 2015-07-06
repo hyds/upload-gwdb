@@ -1,0 +1,262 @@
+
+
+"rn":"site",
+"rec":"record",
+"condition":"condition",
+"top":"",
+"bottom":,
+"contr":,
+"flow":,
+"quality":,
+"yield":,
+"swl":,
+"rdate":,
+"form_desc":,
+[
+{
+	"sourceTable": "registrations",
+	"targetTable": "site",
+    "definition": {
+        "rn":"site",
+	},
+    "sourceSchemaId": "1234",
+    "targetSchemaId": "5678"
+},
+{
+    "definition": {
+        //translation object
+    
+    },
+    "sourceSchemaId": "1234",
+    "targetSchemaId": "5678"
+},
+{
+    "definition": {
+        //translation object
+    
+    },
+    "sourceSchemaId": "1234",
+    "targetSchemaId": "5678"
+},
+]
+
+
+//reg
+"rn":{ "type": "string" },
+"facility_type":{ "type": "string" },
+"office":{ "type": "string" },
+"shire_code":{ "type": "string" },
+"parish":{ "type": "string" },
+"rn_replaces":{ "type": "string" },
+"do_file":{ "type": "string" },
+"ro_file":{ "type": "string" },
+"ho_file":{ "type": "string" },
+"facility_status":{ "type": "string" },
+"drilled_date":{ "type": "string" },
+"driller_name":{ "type": "string" },
+"drilling_comp":{ "type": "string" },
+"basin":{ "type": "string" },
+"method_const":{ "type": "string" },
+"sub_area":{ "type": "string" },
+"lot":{ "type": "string" },
+"plan":{ "type": "string" },
+"description":{ "type": "string" },
+"county":{ "type": "string" },
+"lat":{ "type": "number" },
+"lng":{ "type": "number" },
+"easting":{ "type": "number" },
+"northing":{ "type": "number" },
+"zone":{ "type": "number" },
+"accuracy":{ "type": "number" },
+"gps_accuracy":{ "type": "number" },
+"gis_lat":{ "type": "number" },
+"gis_lng":{ "type": "number" },
+"checked":{ "type": "string" },
+"map_scale":{ "type": "string" },
+"map_series":{ "type": "string" },
+"map_no":{ "type": "string" },
+"prog_sect":{ "type": "string" },
+"equipment":{ "type": "string" },
+"orig_name_no":{ "type": "string" },
+"polygon":{ "type": "string" },
+"confidential":{ "type": "string" },
+"data_owner":{ "type": "string" },
+"bore_line_code":{ "type": "string" },
+"driller_licence_number":{ "type": "string" },
+"log_received_date":{ "type": "string" },
+"objectid":{ "type": "string" }
+
+
+
+
+
+//special analysis resutls
+//12900030|A|202252|B|2824|<|20||
+"rn":{ "type": "string" },
+"pipe":{ "type": "string" },
+"sampnum":{ "type": "string" },
+"bottle":{ "type": "string" },
+"variable_no":{ "type": "number" },
+"flag":{ "type": "string" },
+"value":{ "type": "number" },
+"quality":{ "type": "string" },
+"commnt": { "type": "string" }
+
+
+
+//samples
+//11911125|A|216439|A|15/05/2003|BVSI|GB|DG|AI|NL|1|68.5|||||||DNR|04-0207|27/05/2004||Sample collected during development of bore
+"rn":{ "type": "string" },
+"pipe":{ "type": "string" },
+"sampnum":{ "type": "string" },
+"bottle":{ "type": "string" },
+"sdate":{ "type": "string" },
+"project1":{ "type": "string" },
+"srcsamp":{ "type": "string" },
+"collsamp":{ "type": "string" },
+"collmeth":{ "type": "string" },
+"presmeth1":{ "type": "string" },
+"rec":{ "type": "string" },
+"depth":{ "type": "number" },
+"project2":{ "type": "string" },
+"project3":{ "type": "string" },
+"project4":{ "type": "string" },
+"presmeth2":{ "type": "string" },
+"presmeth3":{ "type": "string" },
+"presmeth4":{ "type": "string" },
+"labref":{ "type": "string" },
+"labsampref":{ "type": "string" },
+"recdate":{ "type": "string" },
+"inputsrc":{ "type": "string" },
+"commnt":{ "type": "string" }
+
+
+//reg
+"rn":"site",
+"description":"comment",
+"lat":"lattitude",
+"lng":"longitude",
+"easting":"easting",
+"northing":"northing",
+"zone":"zone",
+"accuracy":"posacc",
+
+
+
+
+"facility_type":"facility_type",
+
+"office":"office",
+"shire_code":"shire_code",
+"parish":"parish",
+"rn_replaces":"site_replaces",
+"do_file":"do_file",
+"ro_file":"ro_file",
+"ho_file":"ho_file",
+"facility_status":"facility_status",
+"drilled_date":"commence",
+"driller_name":"driller_name",
+"drilling_comp":"",
+"basin":"",
+"method_const":,
+"sub_area":,
+"lot":"lot",
+"plan":"plan",
+"description":"comment",
+"county":{ "type": "string" },
+"lat":"lattitude",
+"lng":"longitude",
+"easting":"easting",
+"northing":"northing",
+"zone":"zone",
+"accuracy":"posacc",
+"gps_accuracy":"gps_accuracy",
+"gis_lat":"gis_lat",
+"gis_lng":"gis_lng",
+"checked":{ "type": "string" },
+"map_scale":{ "type": "string" },
+"map_series":{ "type": "string" },
+"map_no":{ "type": "string" },
+"prog_sect":{ "type": "string" },
+"equipment":{ "type": "string" },
+"orig_name_no":{ "type": "string" },
+"polygon":{ "type": "string" },
+"confidential":{ "type": "string" },
+"data_owner":{ "type": "string" },
+"bore_line_code":"bore_line_code",
+"driller_licence_number":"",
+"log_received_date":{ "type": "string" },
+"objectid":{ "type": "string" }
+
+
+
+
+
+water analysis
+"rn":"",
+"pipe":"",
+"rdate":"",
+"rec":"",
+"analyst":"",
+"analysis_no":"",
+"samp_method":"",
+"source":"",
+"presmeth1":"",
+"collsamp":"",
+"project1":"",
+"depth":"",
+"conduct":"",
+"ph":"",
+"colour":"",
+"colour_ind":"",
+"turb":"",
+"turb_ind":"",
+"sio2":"",
+"sio2_ind":"",
+"hard":"",
+"alk":"",
+"alk_ind":"",
+"fig_merit":"",
+"na_ads_ratio":"",
+"res_alk":"",
+"total_ions":"",
+"total_solids":"",
+"na":"",
+"na_ind":"",
+"k":"",
+"k_ind":"",
+"ca":"",
+"ca_ind":"",
+"mg":"",
+"mg_ind":"",
+"fe":"",
+"mn":"",
+"fe_ind":"",
+"mn_ind":"",
+"hco3":"",
+"hco3_ind":"",
+"co3":"",
+"co3_ind":"",
+"cl":"",
+"cl_ind":"",
+"f":"",
+"f_ind":"",
+"no3":"",
+"no3_ind":"",
+"so4":"",
+"so4_ind":"",
+"zn":"",
+"zn_ind":"",
+"al":"",
+"al_ind":"",
+"b":"",
+"b_ind":"",
+"cu":"",
+"cu_ind":"",
+"po4":"",
+"po4_ind":"",
+"br":"",
+"br_ind":"",
+"i":"",
+"i_ind"
+

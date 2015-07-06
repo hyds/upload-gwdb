@@ -1,0 +1,6 @@
+node_modules
+coverage
+.idea
+DP_GWDB*.*
+DP_GWDBQLD
+output
