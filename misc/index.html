@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Preview images</title>
+    <link rel="stylesheet" type="text/css" href="fastnstyles.css">
+</head>
+<body>
+
+<h2>Data ...</h2>
+<div id="drop">Drop files here.</div>
+<input type="file" id="fileinput" multiple="multiple" accept="image/*" width="48" height="48"/>
+<div id="gallery"></div>
+<input type="file" id="uploadfiles" multiple="multiple" />
+
+
+<h2>Upload images ...</h2>
+<input type="file" id="files" name="file" />
+
+<button onclick="abortRead();">Cancel read</button>
+
+<div id="progress_bar"><div class="percent">0%</div></div>
+
+<!--
+<script src="gallery.js"></script>
+-->
+<script src="app.browser.js"></script>
+
+</body>
+</html>

@@ -5,6 +5,12 @@ var app = require('http').createServer(handler)
   , util = require('util')
   , Files = {};
 
+var services = require('./services'), 
+		unzip = services.unzip,
+		processFiles = services.processFiles; 
+
+
+
 app.listen(8080);
 
 var temp = __dirname + '/tmp';
@@ -22,6 +28,7 @@ function handler (req, res) {
 }
 
 io.sockets.on('connection', function (socket) {
+  	
   	socket.on('Start', function (data) { //data contains the variables that we passed through in the html file
 			var Name = data['Name'];
 			Files[Name] = {  //Create a new Entry in The Files Variable
@@ -68,20 +75,34 @@ io.sockets.on('connection', function (socket) {
 					// 		});
 					// 	});
 					// });
-
-					fs.createReadStream(temp + Name)
-						.pipe(fs.createWriteStream("Video/" + Name))
-						.on('end',function(){
+					if(err){console.log('error: ',err)}
+					var tempFile = temp + Name;
+					var outputFile = __dirname + "/tmp/" + Name;
+					console.log('tempFile', tempFile, "outputFile: ", outputFile);
+					fs.createReadStream(tempFile)
+						.pipe(fs.createWriteStream(outputFile))
+						.pipe(unzip(outputFile))
+						.on('close',function(){
 							fs.unlink(temp + Name, function () { //This Deletes The Temporary File
-								exec("ffmpeg -i Video/" + Name  + " -ss 01:30 -r 1 -an -vframes 1 -f mjpeg Video/" + Name  + ".jpg", function(err){
-									socket.emit('Done', {'Image' : 'Video/' + Name + '.jpg'});
-								});
+								socket.emit('Done', {'Image' : 'tmp/' + Name + '.jpg'});
+
+								// exec("ffmpeg -i Video/" + Name  + " -ss 01:30 -r 1 -an -vframes 1 -f mjpeg Video/" + Name  + ".jpg", function(err){
+								// 	socket.emit('Done', {'Image' : 'Video/' + Name + '.jpg'});
+								// });
 							});
+							
+							// unzip(outputFile)
+							// 	.pipe(processFiles())
+							
+							console.log("done");
+							
+
 						})
+						
 					
 				});
 			}
-			else if(Files[Name]['Data'].length > 10485760){ //If the Data Buffer reaches 10MB
+			else if( Files[Name]['Data'].length > 10485760 ){ //If the Data Buffer reaches 10MB
 				fs.write(Files[Name]['Handler'], Files[Name]['Data'], null, 'Binary', function(err, Writen){
 					Files[Name]['Data'] = ""; //Reset The Buffer
 					var Place = Files[Name]['Downloaded'] / 524288;

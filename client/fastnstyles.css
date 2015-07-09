@@ -1,0 +1,123 @@
+body {
+	background-color: #f7f7f7;
+	width: 100%;
+	font-size: 12px;
+	font-family: "Lucida Console", Monaco, monospace;
+}
+
+
+#title {
+  	font-family : "Trebuchet MS", Helvetica, sans-serif;
+  	color: white;
+  	position: relative;
+	width  : 240px;
+	margin : 0 auto;
+	background-color: #282828;
+	padding: 10px;
+}
+
+button, input, select, textarea {
+	font-size: 12px;
+	font-family: "Lucida Console", Monaco, monospace;
+	width : 200px;
+	margin: 5px;
+	padding: 4px;
+	-webkit-box-sizing: border-box; /* For legacy WebKit based browsers */
+    -moz-box-sizing: border-box; /* For legacy (Firefox <29) Gecko based browsers */
+    box-sizing: border-box;
+}
+
+button.add{
+    position:fixed;
+    bottom: 4px;
+    right: 4px;
+    height: 52px;
+    width: 52px;
+    border-radius: 50%;
+    background: #0AF;
+    font-size: 40px;
+    font-weight: 100;
+    color: white;
+    box-shadow: 0 4px 4px 0px rgba(0,0,0,0.4);
+    z-index: +1;
+}
+
+form {
+	position: relative;
+	background-color: #f7f7f7;
+	padding: 20px;
+	width  : 210px;
+	margin : 0 auto;
+	margin-top: 5%;
+	border-color: gray;
+	border-style: solid;
+	border-width: 1px;
+}
+
+#dropzoneWrap {
+	background-color: #fff;
+	border: 5px solid #f1f1f1;
+	padding-bottom: 0px;
+	padding-top: 0px;
+	height: 350px;
+}
+
+#dropzone {
+	background-color: #f7f7f7;
+	border: 1px dashed gray;
+	color: black;
+	font-family: Arial, sans-serif;
+	font-size: 1em;
+	height: 100%;
+	margin: auto;
+	overflow: scroll;
+	overflow-x: hidden;
+	text-align: center;
+	width: 100%;
+}
+
+#dropzoneLabel {
+	position: relative;
+	top: 45%;
+}
+
+#dropzone .file {
+	background-color: #f5f5f5;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(245, 245, 245)), to(rgb(229, 229, 229)));
+	background-image: -webkit-linear-gradient(top, rgb(245, 245, 245), rgb(229, 229, 229));
+	background-image: -moz-linear-gradient(top, rgb(245, 245, 245), rgb(229, 229, 229));
+	background-image: -o-linear-gradient(top, rgb(245, 245, 245), rgb(229, 229, 229));
+	background-image: -ms-linear-gradient(top, rgb(245, 245, 245), rgb(229, 229, 229));
+	background-image: linear-gradient(top, rgb(245, 245, 245), rgb(229, 229, 229));
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#f5f5f5', EndColorStr='#e5e5e5');
+	color: #909090;
+	font-size: 10px;
+	height: 100%;
+	line-height: 20px;
+	padding: 20px;
+	text-align: left;
+	width: 171px;
+}
+
+#dropzone .file .name {
+	float: left;
+	width: 90%;
+}
+
+#dropzone .file .progress {
+	float: right;
+	width: 10%;
+}
+
+#footer {
+	margin-top: 20px;
+	text-align: center;
+	width: 100%;
+}
+
+#footer, #footer a {
+	color: #c5c5c5;
+	font-family: Arial, sans-serif;
+	font-size: 0.9em;
+}
+
